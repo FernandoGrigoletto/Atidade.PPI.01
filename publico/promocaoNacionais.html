@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <title>Página Inicial</title>
+</head>
+
+<body>
+    <section id="conteudo"></section>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onauxclick = function (e) {
+                e.preventDefault()
+
+
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Agência de Viagem</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Promoção
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="promocaoNacionais.html">Nacionais</a></li>
+                            <li><a class="dropdown-item" href="promocaoInternacional.html">Internacionais</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container px-4 text-center">
+        <div class="row gx-5">
+            <div class="col">
+                <div class="p-3">Pacotes Nacionais</div>
+                <div class="container text-center">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <figure class="figure">
+                                <a class="icon-link" href="rioDeJaneiro.html">
+                                    <img src="https://images.pexels.com/photos/6580703/pexels-photo-6580703.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                        class="figure-img img-fluid rounded" alt="Rio de janeiro"></a><a
+                                    class="icon-link" href="rioDeJaneiro.html">
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#box-seam"></use>
+                                    </svg>
+                                    Rio de Janeiro:
+                                    Saida de São Paulo
+                                    - Aéreo ida e volta
+                                    - Mínimo de duas pessoa*
+                                    - Voo direto
+                                    - Saída: 10/04/2025
+
+                                    a partir de
+
+                                    12x R$ 49
+                                    Preço por pessoa*
+                                </a>
+
+
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure class="figure">
+                                <a class="icon-link" href="saoPaulo.html">
+                                    <img src="https://images.pexels.com/photos/3044565/pexels-photo-3044565.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                        class="figure-img img-fluid rounded" alt="São Paulo"></a><a class="icon-link"
+                                    href="saoPaulo.html">
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#box-seam"></use>
+                                    </svg>
+                                    São Paulo:
+                                    Saida de Brasília
+                                    - Aéreo ida e volta
+                                    - Mínimo de duas pessoa*
+                                    - Voo direto
+                                    - Saída: 25/03/2025
+
+                                    a partir de
+
+                                    12x R$ 79
+                                    Preço por pessoa*
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure class="figure">
+                                <a class="icon-link" href="portoAlegre.html">
+                                    <img src="https://images.pexels.com/photos/18227517/pexels-photo-18227517/free-photo-of-cidade-meio-urbano-ponto-de-referencia-ponto-historico.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                        class="figure-img img-fluid rounded" alt="Porto Alegre"></a><a class="icon-link"
+                                    href="portoAlegre.html">
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#box-seam"></use>
+                                    </svg>
+                                    Porto Alegre: Saida de Rio de Janeiro
+                                    - Aéreo ida e volta
+                                    - Mínimo de duas pessoa*
+                                    - Voo direto
+                                    - Saída: 25/03/2025
+
+                                    a partir de
+
+                                    12x R$ 59
+                                    Preço por pessoa*
+                                </a>
+
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <figure class="figure">
+                                <a class="icon-link" href="salvador.html">
+                                    <img src="https://images.pexels.com/photos/29146147/pexels-photo-29146147.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                        class="figure-img img-fluid rounded" alt="Salvador"></a><a class="icon-link"
+                                    href="salvador.html">
+                                    <svg class="bi" aria-hidden="true">
+                                        <use xlink:href="#box-seam"></use>
+                                    </svg>
+                                    Salvador:
+                                    Saida de São Paulo
+                                    - Aéreo ida e volta
+                                    - Mínimo de duas pessoa*
+                                    - Voo direto
+                                    - Saída: 25/06/2025
+
+                                    a partir de
+
+                                    12x R$ 109
+                                    Preço por pessoa*
+                                </a>
+
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+</html>
