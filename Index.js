@@ -1,6 +1,9 @@
 import express from "express";
 import autenticar from "./seguranca/autenticar.js";
 import session from "express-session";
+import Cliente from "./modelo/cliente.js";
+
+
 
 const porta = 3000;
 const localhost = "0.0.0.0";
