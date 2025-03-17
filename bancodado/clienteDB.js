@@ -5,7 +5,7 @@ export default class ClienteDB{
     constructor(){
         this.init();
     }
-    
+
     async init(){
         try {
             const conexao = await conectar();
@@ -14,7 +14,7 @@ export default class ClienteDB{
                 nome VARCHAR(100) NOT NULL,
                 endereco VARCHAR(150) NOT NULL,
                 bairro VARCHAR(100) NOT NULL,
-                cidade VARCHAR(50) NOT NULL,
+                cidade VARCHAR(100) NOT NULL,
                 uf VARCHAR(2) NOT NULL,
                 telefone VARCHAR(15) NOT NULL,
                 email VARCHAR(100) NOT NULL
@@ -43,7 +43,7 @@ export default class ClienteDB{
             ];
 
             await conexao.execute(sql, parametros);
-            await conexao.release(); 
+            await conexao.release(); //liberar a conexão de volta para o pool
                          
         }
     }

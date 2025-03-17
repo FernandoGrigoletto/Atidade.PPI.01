@@ -2,8 +2,7 @@ import express from "express";
 import autenticar from "./seguranca/autenticar.js";
 import session from "express-session";
 import Cliente from "./modelo/cliente.js";
-
-
+import rotaCliente from "./routes/rotaCliente.js";
 
 const porta = 3000;
 const localhost = "0.0.0.0";
@@ -12,6 +11,7 @@ const app = express();
 
 app.use(express.urlencoded({extended: true})); 
 
+app.use("/cliente", rotaCliente);
 
 app.use(session({
     secret: "m1Nh4Ch4v3S3cR3t4", 
